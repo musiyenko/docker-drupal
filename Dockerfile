@@ -13,3 +13,6 @@ RUN wget https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mhsendma
     chmod +x mhsendmail_linux_amd64 && \
     mv mhsendmail_linux_amd64 /usr/bin/mhsendmail && \
     echo "sendmail_path = '/usr/bin/mhsendmail --smtp-addr=mailhog:1025'" > /usr/local/etc/php/conf.d/mailhog.ini
+
+# Composer
+RUN composer require 'drush/drush'
