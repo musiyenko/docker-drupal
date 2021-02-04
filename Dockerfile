@@ -9,7 +9,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Mailhog
-RUN wget https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mhsendmail_linux_amd64
-RUN chmod +x mhsendmail_linux_amd64
-RUN mv mhsendmail_linux_amd64 /usr/bin/mhsendmail
-RUN echo "sendmail_path = '/usr/bin/mhsendmail --smtp-addr=mailhog:1025'" > /usr/local/etc/php/conf.d/mailhog.ini
+RUN wget https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mhsendmail_linux_amd64 && \
+    chmod +x mhsendmail_linux_amd64 && \
+    mv mhsendmail_linux_amd64 /usr/bin/mhsendmail && \
+    echo "sendmail_path = '/usr/bin/mhsendmail --smtp-addr=mailhog:1025'" > /usr/local/etc/php/conf.d/mailhog.ini
