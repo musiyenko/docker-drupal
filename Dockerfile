@@ -1,4 +1,4 @@
-FROM drupal:9.1.4-php8.0-apache
+FROM drupal:9.1.5-php8.0-apache
 
 LABEL maintainer="www.sy.mk"
 
